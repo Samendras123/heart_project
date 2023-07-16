@@ -22,18 +22,8 @@ with st.sidebar:
 
     )
 
-# selected = option_menu(
-#         menu_title = None,
-#         options=["Home", "Project", "Contact"],
-#         icons = ["house", "book", "envelope"],
-#         menu_icon="list",
-#         default_index = 0,
-#         # orientation="horizontal"
-
-#     )
 
 if selected == "Home":
-    # st.title("This is Home")
     home.main()
     
 
@@ -42,7 +32,6 @@ if selected == "Project":
     model.project()
 
 if selected == "Process":
-    # st.title("This is Contact")
     about.main()
 
 
