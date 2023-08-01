@@ -1,2 +1,2 @@
-# heart_project
+# heart_disease_project
 This repo is a machine learning project that helps to early identify the heart disease. 
