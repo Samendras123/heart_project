@@ -17,6 +17,7 @@ jupyter_server_ydoc==0.6.1
 jupyterlab==3.6.1
 jupyterlab-pygments==0.2.2
 jupyterlab_server==2.20.0
+sklearn
 statsmodels==0.14.0
 streamlit==1.24.1
 streamlit-ace==0.1.1
