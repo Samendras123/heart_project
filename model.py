@@ -26,9 +26,7 @@ def project():
 
         return prediction, prediction_proba
 
-    # App title
-    # st.title("Heart Disease Prediction")
-
+    
     # Input form for user to enter features
     st.image('./img1.gif')
     st.write("**Enter the following details to predict the probability of heart disease :**")
@@ -46,35 +44,18 @@ def project():
         thal = st.selectbox("Thalassemia", ["Normal", "Fixed Defect", "Reversible Defect"])
         chol = st.number_input("Cholesterol (mg/dL)", min_value=1, max_value=1000, value=200)
         exang = st.selectbox("Exercise-Induced Angina", ["No", "Yes"])
-    # sex = st.selectbox("Sex", ["Male", "Female"])
-    # trestbps = st.number_input("Resting Blood Pressure (mm Hg)", min_value=1, max_value=300, value=120)
-    # fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dL", ["False", "True"])
-    # restecg = st.selectbox("Resting ECG", ["Normal", "Abnormal", "Probable or Definite Ventricular Hypertrophy"])
-    # slope = st.selectbox("Slope of the Peak Exercise ST Segment", ["Upsloping", "Flat", "Downsloping"])
-
-    # Convert categorical features to numerical values
-    # sex = 1 if sex == "Male" else 0
-    # fbs = 1 if fbs == "True" else 0
 
     cp = ["Typical Angina", "Atypical Angina", "Non-anginal Pain", "Asymptomatic"].index(cp)
     exang = ["No", "Yes"].index(exang)
-    # slope = ["Upsloping", "Flat", "Downsloping"].index(slope)
     thal = ["Normal", "Fixed Defect", "Reversible Defect"].index(thal)
 
     # Create a dataframe with the user input
     data = pd.DataFrame({
         
-        # "sex": sex,
         "cp": cp,
-        # "trestbps": trestbps,
-        
-        # "fbs": fbs,
-        # "restecg": restecg,
         "thalach": thalach,
-        
         "oldpeak": oldpeak,
         "age": age,
-        # "slope": slope
         "ca": ca,
         "thal": thal,
         "chol": chol,
